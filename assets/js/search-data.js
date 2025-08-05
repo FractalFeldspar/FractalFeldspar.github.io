@@ -450,6 +450,11 @@ ninja.data = [{
           description: "Nov 2017",
           section: "Projects",handler: () => {
               window.location.href = "/projects/auditorium/";
+            },},{id: "projects-backdrive-resistant-mechanism",
+          title: 'Backdrive Resistant Mechanism',
+          description: "May 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/backdrive-resistant-mechanism/";
             },},{id: "projects-reverse-engineering-a-bluebike",
           title: 'Reverse Engineering a Bluebike',
           description: "Feb - Mar 2025",
@@ -555,21 +560,16 @@ ninja.data = [{
           description: "Feb 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/romanesco/";
-            },},{id: "projects-single-use-mechanisms",
-          title: 'Single Use Mechanisms',
-          description: "Nov 2023 - Mar 2024",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/secret1/";
-            },},{id: "projects-backdrive-resistant-mechanism",
-          title: 'Backdrive Resistant Mechanism',
-          description: "May 2024",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/secret2/";
             },},{id: "projects-self-assembling-virus",
           title: 'Self Assembling Virus',
           description: "Nov 2019",
           section: "Projects",handler: () => {
               window.location.href = "/projects/self-assembling-virus/";
+            },},{id: "projects-single-use-mechanisms",
+          title: 'Single Use Mechanisms',
+          description: "Nov 2023 - Mar 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/single-use-mechanisms/";
             },},{id: "projects-split-ring-gearbox",
           title: 'Split Ring Gearbox',
           description: "May 2018",
