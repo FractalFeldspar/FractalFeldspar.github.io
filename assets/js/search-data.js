@@ -470,6 +470,11 @@ ninja.data = [{
           description: "Feb - May 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/chameleon/";
+            },},{id: "projects-chinese-learning-practice",
+          title: 'Chinese Learning Practice',
+          description: "Aug 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chinese-learning-practice/";
             },},{id: "projects-continuous-to-intermittent-motion-mechanisms",
           title: 'Continuous to Intermittent Motion Mechanisms',
           description: "Jun 2018 - Apr 2019",
