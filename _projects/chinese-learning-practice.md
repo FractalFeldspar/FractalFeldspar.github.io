@@ -39,7 +39,7 @@ related_publications: false
         border-radius: 8px;
         font-size: 16px;
         background: white;
-        /* color: #374151; */
+        color: #000000;
         transition: all 0.2s ease;
         cursor: pointer;
         appearance: none;
@@ -243,7 +243,7 @@ related_publications: false
         const subjectDisplay = subject ? ` about "${subject}"` : '';
         // You can use <h3>Generated five sentences${subjectDisplay}:</h3> to describe what sentences are being generated
         document.getElementById("output").innerHTML = `
-            <div style="background-color: var(--global-theme-color-light); padding: 10px; border-radius: 5px; margin-top: 10px; border-left: 4px solid var(--global-theme-color);">
+            <div style="background-color: var(--global-theme-color-light); padding: 10px; border-radius: 8px; margin-top: 10px; margin-bottom: 40px; border-left: 4px solid var(--global-theme-color);">
                 Loading... (this usually takes 20-30 seconds)
             </div>
         `;
@@ -251,7 +251,11 @@ related_publications: false
         try {
             const data = await generateSentence(selectedDifficulty, subject);
             document.getElementById("output").innerHTML = `
-                <div class="chinese-text" style="background-color: var(--global-theme-color-light); padding: 10px; border-radius: 5px; margin-top: 10px; border-left: 4px solid var(--global-theme-color); white-space: pre-wrap;">${data.sentence}</div>
+                <div class="chinese-text" style="background-color: var(--global-theme-color-light); padding: 10px; border-radius: 8px; margin-top: 10px; margin-bottom: 40px; border-left: 4px solid var(--global-theme-color); white-space: pre-wrap;">${data.sentence}</div>
+            `;
+            const api_prompt = `The prompt used to generate the sentences above is:<br><i>${data.prompt_sent_to_api}</i>`;
+            document.getElementById("prompt").innerHTML = `
+                <div>${api_prompt}</div>
             `;
             
         } catch (error) {
@@ -272,6 +276,135 @@ related_publications: false
 
 
 
+<style>
+    /* Minimal dropdown - inherits all your existing styles */
+    .native-section {
+        margin: 1em 0; /* Same as your paragraphs */
+        margin-top: 40px;
+    }
+
+    .native-header {
+        background: transparent;
+        border: none;
+        border-top: 1px solid #ddd;    /* Line above */
+        border-bottom: 1px solid #ddd; /* Line below */
+        width: 100%;
+        padding: 12px 16px;
+        text-align: left;
+        cursor: pointer;
+        font-family: inherit; /* Uses your website's font */
+        font-size: inherit;   /* Uses your website's font size */
+        color: inherit;       /* Uses your website's text color */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        /* transition: background-color 0.2s ease; */
+        transition: border-color 0.2s ease;
+        border-radius: 0px; /* Subtle rounding, remove if you prefer sharp corners */
+    }
+
+    .native-header:hover {
+        /* background: #e9ecef; */
+        border-top-color: #999;
+        border-bottom-color: #999;
+    }
+
+    .native-header:focus {
+        outline: 2px solid var(--global-theme-color);
+        outline-offset: 2px;
+    }
+
+    /* Simple triangle indicator */
+    .native-toggle {
+        width: 0;
+        height: 0;
+        border-left: 5px solid currentColor; /* Uses text color */
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        transition: transform 0.2s ease;
+        margin-right: 4px;
+    }
+
+    .native-header[aria-expanded="true"] .native-toggle {
+        transform: rotate(90deg);
+    }
+
+    /* Content - completely unstyled to inherit your site's styles */
+    .native-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .native-content.open {
+        max-height: 800px;
+    }
+
+    .native-text {
+        /* NO padding, borders, or styling - just inherits everything */
+        margin-top: 1em; /* Same spacing as your paragraphs */
+    }
+</style>
+
+
+<div class="native-section">
+    <button class="native-header" aria-expanded="false" onclick="toggleSection('native1')" id="native1-toggle">
+        <span class="native-toggle"></span>
+        <span>More Information</span>
+    </button>
+    <div class="native-content" id="native1-content">
+        <div class="native-text">
+            <p id="prompt"></p>
+            <p>
+            Around one year ago, I decided to try learning Chinese again. I have had a long history of trying to learn other languages (Spanish, German, and Chinese), but I always seemed to stop short of reaching fluency. I would learn enough of the language to do well in the classroom and to get by when talking to native speakers, but not enough to fully understand conversations between native speakers.
+            </p>
+            <p>
+            I eventually came to the conclusion that learning more vocabulary was key. While circumlocution (such as saying "thing that makes light" if I don't know the word for "lightbulb") is useful, my limited vocabulary made it difficult to speak efficiently and understand native speakers. I think a big reason why I felt like I was hitting a wall when I tried to go from being able to get by to being able to speak fluently was because the amount of vocabulary I needed to learn was increasing exponentially. This is reflected in the Chinese HSK system, which groups Chinese words into six levels based on their frequency of use. The 150 most common Chinese words are contained in HSK 1, HSK 2 introduces 150 of the next most common Chinese words, HSK 3 introduces 300 more words, and so on until HSK 6, which introduces 2500 more words. It's worth noting that the words in HSK 6 are words like "instinct," "ambition," and "specialty"—words that aren't used in every sentence but will almost certainly show up in a moderate conversation.
+            </p>
+            <p>
+            For this reason, I set up some Anki decks to help me learn all the Chinese HSK vocabulary. I started between HSK 2 and 3 and started learning HSK 6 a few months ago. With this approach, I was finally able to make real progress in my Chinese (this was the 4th time I had tried learning Chinese beyond what I had learned in elementary school). I noticed that I was able to read much more of the Chinese on packages and instruction manuals I encountered, and I even began to understand Chinese shows like <a href="https://en.wikipedia.org/wiki/Journey_to_the_West:_Legends_of_the_Monkey_King">the Monkey King</a>, which I couldn't understand when I was younger.
+            </p>
+            <p>
+            However, I recently realized that my ability to speak was lagging far behind my improving ability to listen and read. Whenever I tried to translate an English sentence to Chinese, I often knew the Chinese words corresponding to the English words but I didn't know how to put them together. For this reason, I created this sentence generator. Since each sentence contains the Chinese, Pinyin, and English, I can practice both translating Chinese to English and English to Chinese. I chose to use Deepseek to generate the sentences because I believed that Deepseek, being a Chinese LLM, would produce more accurate Chinese sentences than ChatGPT or Google Translate.
+            </p>
+            <p>
+            In order to focus the sentences on topics I wanted to learn more words about, when the user doesn't specify a subject, the program automatically chooses subjects and styles to spice up the output sentences. I wanted to see what it was like to write an LLM wrapper. API call to Deepseek. Took less than a day to figure out how to use the deepseek api and generate sentences on my website. After that, I spent a few more days polishing up the program, and most of that time was spent making the UI prettier. The sentences take >20 seconds to load because that's the time it takes Deepseek to generate the sentences. Their web interface takes around the same amount of time as the API, but this lag is less noticeable on their web interface because I can see the sentences as they're being generated. I tested ChatGPT's generation time and it also takes them around 20 seconds on their web interface.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSection(sectionId) {
+        const button = document.getElementById(sectionId + '-toggle');
+        const content = document.getElementById(sectionId + '-content');
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+        
+        button.setAttribute('aria-expanded', !isOpen);
+        
+        if (isOpen) {
+            content.classList.remove('open');
+        } else {
+            content.classList.add('open');
+        }
+    }
+
+    // Keyboard support
+    document.querySelectorAll('[id$="-toggle"]').forEach(button => {
+        button.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const sectionId = this.id.replace('-toggle', '');
+                toggleSection(sectionId);
+            }
+        });
+    });
+</script>
 
 
 
