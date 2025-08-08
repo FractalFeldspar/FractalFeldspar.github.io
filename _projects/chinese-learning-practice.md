@@ -26,7 +26,7 @@ related_publications: false
     label {
         display: block;
         font-weight: 500;
-        color: #374151;
+        /* color: #374151; */
         margin-bottom: 6px;
         font-size: 14px;
     }
@@ -39,7 +39,7 @@ related_publications: false
         border-radius: 8px;
         font-size: 16px;
         background: white;
-        color: #374151;
+        /* color: #374151; */
         transition: all 0.2s ease;
         cursor: pointer;
         appearance: none;
@@ -57,7 +57,7 @@ related_publications: false
     select:focus {
         outline: none;
         border-color: var(--global-theme-color);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        /* box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); */
     }
 
     /* Enhanced Text Input */
@@ -67,7 +67,9 @@ related_publications: false
         border: 2px solid #e5e7eb;
         border-radius: 8px;
         font-size: 16px;
-        color: #374151;
+        background: white;
+        /* color: #374151; */
+        color: #000000;
         transition: all 0.2s ease;
         box-sizing: border-box;
     }
@@ -79,7 +81,7 @@ related_publications: false
     input[type="text"]:focus {
         outline: none;
         border-color: var(--global-theme-color);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        /* box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); */
     }
 
     input[type="text"]::placeholder {
@@ -89,7 +91,7 @@ related_publications: false
     .generate-btn {
         width: 100%;
         padding: 14px 24px;
-        background: #e28ede;
+        background: var(--chinese-button-color);
         color: white;
         border: none;
         border-radius: 8px;
@@ -102,19 +104,20 @@ related_publications: false
     }
 
     .generate-btn:hover {
-        background: #ee85e9;
+        background: var(--chinese-button-hover-color);
         transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        box-shadow: 0 4px 12px #b8b8b866;
+        /* box-shadow: 0 4px 12px #ee85e966; */
     }
 
     .generate-btn:active {
         transform: translateY(0);
-        box-shadow: 0 2px 4px rgba(59, 130, 246, 0.4);
+        box-shadow: 0 4px 12px #b8b8b866;
     }
 
     .generate-btn:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        box-shadow: 0 4px 12px #b8b8b866;
     }
 
     /* Optional: Add a subtle loading state */
