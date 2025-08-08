@@ -337,7 +337,7 @@ related_publications: false
     }
 
     .native-content.open {
-        max-height: 2000px;
+        max-height: 9999px;
     }
 
     .native-text {
