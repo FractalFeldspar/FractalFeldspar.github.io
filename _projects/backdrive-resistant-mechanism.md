@@ -4,7 +4,7 @@ title: Backdrive Resistant Mechanism
 description: May 2024
 img: assets/img/backdrive_resisting_mechanism.jpg
 importance: 2
-category: Mechanical
+category: Secret
 related_publications: false
 ---
 
