@@ -4,7 +4,7 @@ title: Single Use Mechanisms
 description: Nov 2023 - Mar 2024
 img: assets/img/ball_based.jpg
 importance: 2
-category: Secret
+category: Mechanical
 related_publications: false
 ---
 
