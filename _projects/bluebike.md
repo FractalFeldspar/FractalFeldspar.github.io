@@ -4,7 +4,7 @@ title: Reverse Engineering a Bluebike
 description: Feb - Mar 2025
 img: assets/img/Bluebike/bluebike.jpg
 importance: 1
-category: Electromechanical
+category: Hidden
 related_publications: false
 ---
 
