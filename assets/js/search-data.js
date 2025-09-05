@@ -495,6 +495,11 @@ ninja.data = [{
           description: "Sep 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ebike-kickstand/";
+            },},{id: "projects-full-auto-marble-run",
+          title: 'Full Auto Marble Run',
+          description: "Aug - Sep 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/full-auto-marble-run/";
             },},{id: "projects-jenga-calculator",
           title: 'Jenga Calculator',
           description: "Apr - Jul 2016",
