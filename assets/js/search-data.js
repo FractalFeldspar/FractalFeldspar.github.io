@@ -525,6 +525,11 @@ ninja.data = [{
           description: "Apr - Jul 2019",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mechanical-ball-clock/";
+            },},{id: "projects-mechanical-design-challenges",
+          title: 'Mechanical Design Challenges',
+          description: "Oct 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mechanical-design-challenges/";
             },},{id: "projects-milk-jug",
           title: 'Milk Jug',
           description: "Sep 2024",
