@@ -137,19 +137,10 @@ Additionally, if a mechanism offers more functionality than necessary, then ther
 <h2 class="post-title" id="challenges">Mechanical Design Challenges</h2>
 I created this list of mechanical design challenges because there are currently very few resources for one to practice coming up with mechanical solutions to design problems. I took inspiration from the format of Project Euler and USAMO and USACO practice problems. Additionally, many of these were inspired by mechanisms I saw in commercially successful products. My intention was to make the challenges cover a broad range of mechanisms and to be heavy on spatial reasoning. Some of these challenges can be "brute forced" with overly complicated mechanisms, but I strongly encourage looking for simple, practical solutions. I am still in the process of adding solutions to each challenge. If you have a new challenge idea or think you have found an elegant solution to any of these challenges, send me an email. I will do my best to give credit to whoever came up with the challenge or solution.
 
-<p>Mechanism where a revolute joint encounters a hard stop after &gt;3 rotations</p>
-<details>
-    <summary>Show answer</summary>
-    <p>Mechanism based on the disks inside of a dial combination lock</p>
-</details>
+
 
 <strong>Motion Restriction</strong>
 <ol>
-    <li>Mechanism where a revolute joint encounters a hard stop after <span>&gt;</span>1 rotation</li>
-        <ul>
-            <summary>Show answer</summary>
-            <li>Spur gear with hard stop</li>
-        </ul>
     <li>Mechanism where a revolute joint encounters a hard stop after <span>&gt;</span>1 rotation</li>
         <ul>
             <li>Spur gear with hard stop</li>
@@ -270,54 +261,87 @@ I created this list of mechanical design challenges because there are currently 
 </ol>
 
 <strong>States</strong>
-Mechanism with parallel input and output slider joints where the output slider joint is locked in place until the input slider joint is moved past a certain position
-Push button quick release pin
-Mechanism where an output slider joint is locked in place unless each of the 5 input slider joints are slid from their “off” to “on” positions in a specific order
-Directional combination lock
-Simplex push button lock
-Mechanism where a slider joint toggles between an “on” position and an “off” position each time it is pushed in the same direction
-Retractable pen button
-MicroSD card push slot
-Mechanism where a revolute joint toggles between an “on” position and an “off” position each time it is rotated in the same direction
-Sunglasses holder
-Window latch
-Mechanism where a slider joint can slide forward and, after sliding back to its starting position, is unable to slide forward again
-Living hinge that has 3 stable rotational positions
-Mechanism containing a row of 5 slider joints where each joint has an “on” position and an “off” position, and pushing any one of the slider joints to its "on" position causes all the other slider joints to move to their "off" positions
-Buttons of blenders/food processors
-Mechanism containing a coaxial stack of 5 revolute joints where each joint has an “on” position and an “off” position, and rotating any one of the rotary joints to its “on” position prevents the other rotary joints from rotating
-Lock and key mechanism that doesn’t need springs, gravity, or any other passive biasing force to function.
-Disk detainer lock
-Lock whose method of unlocking involves alternating between leaving the lock upright and leaving the lock upside down for specific amounts of time
+<ol>
+    <li>Mechanism with parallel input and output slider joints where the output slider joint is locked in place until the input slider joint is moved past a certain position
+        <ul>
+            <li>Push button quick release pin</li>
+        </ul>
+    </li>
+    <li>Mechanism where an output slider joint is locked in place unless each of the 5 input slider joints are slid from their "off" to "on" positions in a specific order
+        <ul>
+            <li>Directional combination lock</li>
+            <li>Simplex push button lock</li>
+        </ul>
+    </li>
+    <li>Mechanism where a slider joint toggles between an "on" position and an "off" position each time it is pushed in the same direction
+        <ul>
+            <li>Retractable pen button</li>
+            <li>MicroSD card push slot</li>
+        </ul>
+    </li>
+    <li>Mechanism where a revolute joint toggles between an "on" position and an "off" position each time it is rotated in the same direction
+        <ul>
+            <li>Sunglasses holder</li>
+            <li>Window latch</li>
+        </ul>
+    </li>
+    <li>Mechanism where a slider joint can slide forward and, after sliding back to its starting position, is unable to slide forward again</li>
+    <li>Living hinge that has 3 stable rotational positions</li>
+    <li>Mechanism containing a row of 5 slider joints where each joint has an "on" position and an "off" position, and pushing any one of the slider joints to its "on" position causes all the other slider joints to move to their "off" positions
+        <ul>
+            <li>Buttons of blenders/food processors</li>
+        </ul>
+    </li>
+    <li>Mechanism containing a coaxial stack of 5 revolute joints where each joint has an "on" position and an "off" position, and rotating any one of the rotary joints to its "on" position prevents the other rotary joints from rotating</li>
+    <li>Lock and key mechanism that doesn't need springs, gravity, or any other passive biasing force to function.
+        <ul>
+            <li>Disk detainer lock</li>
+        </ul>
+    </li>
+    <li>Lock whose method of unlocking involves alternating between leaving the lock upright and leaving the lock upside down for specific amounts of time</li>
+</ol>
 
 <strong>Fluids and Granular Media</strong>
-Mechanism that is able to take water from a reservoir and fill up a container of water at a higher water level without using any moving parts
-Pulser pump
-Evaporation
-Capillary action
-Container that allows air inside of it to escape without allowing any of the outside air to enter the container
-Container that allows the user to dispense a precise amount of liquid from a container even when the initial volume of liquid in the container is variable
-Mechanism that releases water after a spring-loaded button is pushed down and automatically stops releasing water after 5 seconds
-Mechanism that releases sand after a spring-loaded button is pushed down and automatically stops releasing sand after 5 seconds
-Mechanism where balls of equal diameter may enter at any rate but always exit one at a time with at least one second between each ball. No moving parts other than the balls are allowed.
-Mechanism that takes in balls of equal diameter and then releases them all at once after a certain number of balls has accumulated. No moving parts other than the balls are allowed.
-An 8-bit mechanical binary adder where the only moving parts are balls. Must also be able to perform subtraction and handle negative numbers.
+<ol>
+    <li>Mechanism that is able to take water from a reservoir and fill up a container of water at a higher water level without using any moving parts
+        <ul>
+            <li>Pulser pump</li>
+            <li>Evaporation</li>
+            <li>Capillary action</li>
+        </ul>
+    </li>
+    <li>Container that allows air inside of it to escape without allowing any of the outside air to enter the container</li>
+    <li>Container that allows the user to dispense a precise amount of liquid from a container even when the initial volume of liquid in the container is variable</li>
+    <li>Mechanism that releases water after a spring-loaded button is pushed down and automatically stops releasing water after 5 seconds</li>
+    <li>Mechanism that releases sand after a spring-loaded button is pushed down and automatically stops releasing sand after 5 seconds</li>
+    <li>Mechanism where balls of equal diameter may enter at any rate but always exit one at a time with at least one second between each ball. No moving parts other than the balls are allowed.</li>
+    <li>Mechanism that takes in balls of equal diameter and then releases them all at once after a certain number of balls has accumulated. No moving parts other than the balls are allowed.</li>
+    <li>An 8-bit mechanical binary adder where the only moving parts are balls. Must also be able to perform subtraction and handle negative numbers.</li>
+</ol>
 
 <strong>Other</strong>
-Mechanism where a revolute joint takes >10 seconds to rotate from one position to another
-Mechanism where a revolute joint takes >10,000 seconds to rotate from one position to another
-Drip based mechanism
-Evaporation based mechanism
-Mechanical clock that can account for daylight savings and leap years.
-Compliant mechanism that allows for >10 rotations
-Compliant mechanism that allows for >100 rotations
-Mechanism that can lift an object weighing 10x as much as the mechanism to 10x the starting height of the mechanism
-Deployable composite boom
-Rigid chain actuator
-Helical band actuator (spiralift)
-Inflatable tube
-Chain reaction mechanism that can send a signal to a point 10 meters away in the horizontal direction in under a second using nothing but Jenga blocks
-Structure that can extend as far as possible over a ledge using nothing but 100 Jenga blocks
-Mechanism where the ratio between the number of steps required to disassemble it and the number of components in the object is >10:1 (a "step" can be defined as one uninterrupted movement of a component from one position to another position)
-The shape of a component that, when placed with copies of itself in a container, automatically forms a clot over a hole in the container that has a diameter 10x the spherical bounding box of the component
-Fully mechanical implementation of Conway’s game of life that can be hung on the wall like an interactive poster. Must have at least 400 cells and fit within a 1x1x0.05 meter bounding box.
+<ol>
+    <li>Mechanism where a revolute joint takes &gt;10 seconds to rotate from one position to another</li>
+    <li>Mechanism where a revolute joint takes &gt;10,000 seconds to rotate from one position to another
+        <ul>
+            <li>Drip based mechanism</li>
+            <li>Evaporation based mechanism</li>
+        </ul>
+    </li>
+    <li>Mechanical clock that can account for daylight savings and leap years.</li>
+    <li>Compliant mechanism that allows for &gt;10 rotations</li>
+    <li>Compliant mechanism that allows for &gt;100 rotations</li>
+    <li>Mechanism that can lift an object weighing 10x as much as the mechanism to 10x the starting height of the mechanism
+        <ul>
+            <li>Deployable composite boom</li>
+            <li>Rigid chain actuator</li>
+            <li>Helical band actuator (spiralift)</li>
+            <li>Inflatable tube</li>
+        </ul>
+    </li>
+    <li>Chain reaction mechanism that can send a signal to a point 10 meters away in the horizontal direction in under a second using nothing but Jenga blocks</li>
+    <li>Structure that can extend as far as possible over a ledge using nothing but 100 Jenga blocks</li>
+    <li>Mechanism where the ratio between the number of steps required to disassemble it and the number of components in the object is &gt;10:1 (a "step" can be defined as one uninterrupted movement of a component from one position to another position)</li>
+    <li>The shape of a component that, when placed with copies of itself in a container, automatically forms a clot over a hole in the container that has a diameter 10x the spherical bounding box of the component</li>
+    <li>Fully mechanical implementation of Conway's game of life that can be hung on the wall like an interactive poster. Must have at least 400 cells and fit within a 1x1x0.05 meter bounding box.</li>
+</ol>
