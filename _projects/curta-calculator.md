@@ -3,7 +3,7 @@ layout: page
 title: Curta Calculator
 description: Aug 2024 - Feb 2025
 img: assets/img/curta_calculator/curta_calculator.jpg
-importance: 1
+importance: 2
 category: Mechanical
 related_publications: false
 ---

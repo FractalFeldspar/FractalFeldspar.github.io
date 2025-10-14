@@ -18,7 +18,7 @@ related_publications: false
     </div>
 </div>
 
-For those unfamiliar with Bluebikes, they're a bicycle sharing service in Boston. To use one, you go to a dock, rent a bike for around <span>&#36;</span>3, and then put it back at any dock in the city once you're done. One day, I noticed a Bluebike left discarded on the side of the street. When I came back 12 hours later and noticed that it was still there, I concluded that it was abandoned and decided to learn as much as I could from it. I was curious about everything ranging from its electronics to its brakes, but I was particularly curious about the gear shifter. Unlike most bikes which only allow you to switch between discrete gear ratios, Bluebikes allow you to switch continuously between gear ratios.
+Bluebikes is a bicycle sharing service in Boston. To use one, you go to a dock, rent a bike for around <span>&#36;</span>3, and then put it back at any dock in the city once you're done. One day, I noticed a Bluebike left discarded on the side of the street. When I came back 12 hours later and noticed that it was still there, I concluded that it was abandoned and decided to learn as much as I could from it. I was curious about everything ranging from its electronics to its brakes, but I was particularly curious about the gear shifter. Unlike most bikes which only allow you to switch between discrete gear ratios, Bluebikes allow you to switch continuously between gear ratios.
 
 <h2 class="post-title">Electronics</h2>
 
@@ -80,7 +80,7 @@ The working principle is illustrated by this image. The change in the steel ball
     </div>
 </div>
 
-The back wheel hub contains the continuously variable gear shifter. It was made by <a href="https://enviolo.com/products/">Enviolo</a>. Enviolo has a nice animation showing how the device works. In the second picture, I removed the sprocket and gear ratio adjuster. They would be mounted on the right side of the picture.
+The back wheel hub contains the continuously variable gear shifter. It was made by <a href="https://enviolo.com/products/">Enviolo</a>. Enviolo has a nice <a href="https://www.youtube.com/watch?v=6xY2S-9gjHI">animation</a> showing how the device works. In the second picture, I removed the sprocket and gear ratio adjuster. They would be mounted on the right side of the picture.
 
 <div class="row justify-content-center">
     <div class="col-sm-8 mt-3">
