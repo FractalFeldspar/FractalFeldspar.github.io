@@ -450,6 +450,11 @@ ninja.data = [{
           description: "Nov 2017",
           section: "Projects",handler: () => {
               window.location.href = "/projects/auditorium/";
+            },},{id: "projects-automatic-marble-run",
+          title: 'Automatic Marble Run',
+          description: "Aug - Sep 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/automatic-marble-run/";
             },},{id: "projects-backdrive-resistant-mechanism",
           title: 'Backdrive Resistant Mechanism',
           description: "May 2024",
@@ -495,11 +500,6 @@ ninja.data = [{
           description: "Sep 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ebike-kickstand/";
-            },},{id: "projects-full-auto-marble-run",
-          title: 'Full Auto Marble Run',
-          description: "Aug - Sep 2025",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/full-auto-marble-run/";
             },},{id: "projects-jenga-calculator",
           title: 'Jenga Calculator',
           description: "Apr - Jul 2016",
