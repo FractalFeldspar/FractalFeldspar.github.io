@@ -3,8 +3,8 @@ layout: page
 title: Single Use Mechanisms
 description: Nov 2023 - Mar 2024
 img: assets/img/ball_based.jpg
-importance: 2
-category: Mechanical
+importance: 13
+category: More Projects
 related_publications: false
 ---
 

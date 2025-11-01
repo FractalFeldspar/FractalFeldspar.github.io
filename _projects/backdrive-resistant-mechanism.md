@@ -3,8 +3,8 @@ layout: page
 title: Backdrive Resistant Mechanism
 description: May 2024
 img: assets/img/backdrive_resisting_mechanism.jpg
-importance: 2
-category: Mechanical
+importance: 14
+category: More Projects
 related_publications: false
 ---
 

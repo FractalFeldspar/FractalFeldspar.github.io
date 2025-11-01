@@ -3,8 +3,8 @@ layout: page
 title: Wingnut
 description: May 2024
 img: assets/img/Wingnut.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

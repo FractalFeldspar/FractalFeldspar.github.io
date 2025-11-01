@@ -30,13 +30,11 @@ projects:
   limit: 3
 ---
 
-I studied mechanical engineering at MIT as an undergraduate. After I graduated in 2023, I worked in the medical device industry <b>designing and improving surgical instruments</b>.
+I studied mechanical engineering at MIT as an undergraduate. After I graduated in 2023, I worked in the medical device industry designing and improving surgical instruments.
 
-Right now, I am working on a <b>program to automate the design of mechanical hardware</b>. My vision is a text to CAD program that takes in design requirements and outputs an assembly of 3D models that implements those design requirements.
+In my free time, I have been building a fully mechanical computer and a fully mechanical implementation of [Conway’s game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). I deeply enjoy discovering new mechanisms and exploring what is possible with mechanical hardware.
 
-I have also been working on building a <b>fully mechanical computer</b> and a <b>fully mechanical implementation of [Conway’s game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)</b>. I am very interested in discovering new mechanisms and exploring what is possible with mechanical hardware.
+If you would like to chat, please reach out! I am always eager to meet new people.
 
-In the near future, I hope to design <b>hardware for space</b>.
-
-Other interests: electronics, rock climbing, biking, and cooking experiments.
+Other interests: electronics, rock climbing, sci-fi books, and cooking experiments.
 

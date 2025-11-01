@@ -3,8 +3,8 @@ layout: page
 title: Auditorium Architectural Model
 description: Nov 2017
 img: assets/img/auditorium.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

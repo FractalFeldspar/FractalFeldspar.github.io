@@ -3,8 +3,8 @@ layout: page
 title: E-Bike Kickstand
 description: Sep 2023
 img: assets/img/kickstand/full_kickstand.jpg
-importance: 4
-category: Mechanical
+importance: 90
+category: More Projects
 related_publications: false
 ---
 
@@ -34,7 +34,7 @@ My friend broke his e-bike’s kickstand, so I decided this would be a good oppo
         {% include figure.liquid loading="eager" path="assets/img/kickstand/assembling_kickstand.jpg" alt="assembling kickstand using the mill spindle" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-Assembling my milled aluminum with the rest of the kickstand was surprisingly difficult due to the extremely stiff spring the kickstand used for its bistable positioning. Fortunately, I was able to clamp the aluminum in the mill’s vise and compress the spring by using the mill spindle as an arbor press.
+Assembling my milled aluminum with the rest of the kickstand was surprisingly difficult due to the extremely stiff spring the kickstand used for its bistable positioning. Fortunately, I was able to clamp the aluminum in the mill’s vise and compress the spring by gently using the mill spindle as an arbor press.
 
 <div class="row justify-content-center">
     <div class="col-sm-6 mt-3">

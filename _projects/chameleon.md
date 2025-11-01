@@ -3,8 +3,8 @@ layout: page
 title: Chameleon
 description: Feb - May 2023
 img: assets/img/On_Grass.jpg
-importance: 0
-category: Electromechanical
+importance: 3
+category: Featured
 related_publications: false
 ---
 

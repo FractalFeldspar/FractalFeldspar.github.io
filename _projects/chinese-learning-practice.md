@@ -3,8 +3,8 @@ layout: page
 title: Chinese Learning Practice
 description: Aug 2025
 img: assets/img/chinese_practice.png
-importance: 3
-category: Electromechanical
+importance: 10
+category: More Projects
 related_publications: false
 ---
 

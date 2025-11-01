@@ -3,8 +3,8 @@ layout: page
 title: Milk Jug
 description: Sep 2024
 img: assets/img/milk_jug.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

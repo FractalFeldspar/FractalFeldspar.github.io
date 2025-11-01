@@ -3,8 +3,8 @@ layout: page
 title: Self Assembling Virus
 description: Nov 2019
 img: assets/img/virus/perfect_virus.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

@@ -3,8 +3,8 @@ layout: page
 title: Mechanical Design Challenges
 description: Oct 2025
 img: assets/img/mechanical_design_challenges/mechanical_design_challenges.png
-importance: 0.5
-category: Mechanical
+importance: 2
+category: Featured
 redirect: https://maxrfan.substack.com/p/mechanical-design-challenges?r=5qpv3p
 related_publications: false
 ---

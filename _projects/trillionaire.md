@@ -3,8 +3,8 @@ layout: page
 title: Trillionaire
 description: Jan 2020
 img: assets/img/trillionaire.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

@@ -3,8 +3,8 @@ layout: page
 title: Split Ring Gearbox
 description: May 2018
 img: assets/img//split_ring_gearbox/split_ring_gearbox.jpg
-importance: 2
-category: Mechanical
+importance: 15
+category: More Projects
 related_publications: false
 ---
 

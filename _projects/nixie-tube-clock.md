@@ -3,8 +3,8 @@ layout: page
 title: Nixie Tube Clock
 description: Jan 2023
 img: assets/img/nixie/nixie_closeup.jpg
-importance: 2
-category: Electromechanical
+importance: 3
+category: More Projects
 related_publications: false
 ---
 

@@ -3,8 +3,8 @@ layout: page
 title: Wheelchair Speed Governor
 description: Sep - Dec 2022
 img: assets/img/wheelchair/main_view.jpg
-importance: 2
-category: Electromechanical
+importance: 4
+category: Featured
 related_publications: false
 ---
 

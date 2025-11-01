@@ -3,8 +3,8 @@ layout: page
 title: Springless Ratchet
 description: Oct 2017
 img: assets/img/springless_ratchet.jpg
-importance: 4
-category: Mechanical
+importance: 90
+category: More Projects
 related_publications: false
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Full Auto Marble Run
+title: Automatic Marble Run
 description: Aug - Sep 2025
 img: assets/img/marble_run/marble_run.jpg
-importance: 2
-category: Mechanical
+importance: 6
+category: More Projects
 related_publications: false
 ---
 

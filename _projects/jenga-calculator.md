@@ -3,8 +3,8 @@ layout: page
 title: Jenga Calculator
 description: Apr - Jul 2016
 img: assets/img/jenga_calculator/jenga_calculator.JPG
-importance: 2
-category: Mechanical
+importance: 1
+category: More Projects
 related_publications: false
 ---
 

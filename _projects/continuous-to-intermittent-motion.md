@@ -3,8 +3,8 @@ layout: page
 title: Continuous to Intermittent Motion Mechanisms
 description: Jun 2018 - Apr 2019
 img: assets/img/continuous_to_intermittent/skipper_drive.jpg
-importance: 2
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

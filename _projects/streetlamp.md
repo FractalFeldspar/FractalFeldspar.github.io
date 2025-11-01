@@ -3,8 +3,8 @@ layout: page
 title: Streetlamp Morse Code
 description: Jul - Oct 2022
 img: assets/img/Streetlamp/streetlamp_with_keyboard.jpg
-importance: 2
-category: Electromechanical
+importance: 11
+category: More Projects
 related_publications: false
 ---
 

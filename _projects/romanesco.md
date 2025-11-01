@@ -3,8 +3,8 @@ layout: page
 title: Romanesco
 description: Feb 2023
 img: assets/img/Romanesco.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

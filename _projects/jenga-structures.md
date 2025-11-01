@@ -3,14 +3,14 @@ layout: page
 title: Jenga Structures
 description: Mar 2014 - Feb 2017
 img: assets/img/jenga/44.jpg
-importance: 5
-category: Mechanical
+importance: 100
+category: More Projects
 related_publications: false
 ---
 
 <!-- Adjust border-radius to 4px, set padding to 0px, lazy loading -->
 
-In March 2014, I started building structures with Jenga blocks. Even though I had spent my childhood building with Legos and K’nex, something about the constraints—the limited number of blocks, the uniform shapes, the limited tablespace, and no instruction manual—pushed me to think more creatively. Over the next few years, I built hundreds of structures: towers, bridges, arches, landscapes, and even a mechanical calculator. Looking back, I believe this was when my fascination for mechanical hardware really began. If something as complex as a calculator could be built out of something as simple as Jenga blocks, then I could only begin to imagine what might be possible with more advanced shapes. I believe this curiosity to explore what I could do with physical shapes carried through to my later projects and ultimately led me to study mechanical engineering in college. 
+In March 2014, I started building structures with Jenga blocks. Even though I had spent my childhood building with Legos and K’nex, something about the constraints—the limited number of blocks, the uniform shapes, the limited tablespace, and no instruction manual—pushed me to think more creatively. Over the next few years, I built hundreds of structures: towers, bridges, arches, landscapes, and even a mechanical calculator. Looking back, I believe this was when my fascination for mechanical hardware really began. If something as complex as a calculator could be built out of something as simple as Jenga blocks, then I could only begin to imagine what might be possible with more advanced shapes. I believe this curiosity to explore what I could do with physical shapes carried through to my later projects and ultimately led me to pursue mechanical engineering professionally. 
 
 In this page, I have included the highlights of my Jenga projects, sorted by category:
 <ul>

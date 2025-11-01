@@ -3,8 +3,8 @@ layout: page
 title: Raspberry Pi Ball Launcher
 description: Jan - Feb 2021
 img: assets/img/ball_launcher/ball_launcher.jpg
-importance: 3
-category: Electromechanical
+importance: 7
+category: More Projects
 related_publications: false
 ---
 

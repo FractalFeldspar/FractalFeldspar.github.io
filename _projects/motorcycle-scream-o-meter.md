@@ -3,8 +3,8 @@ layout: page
 title: Motorcycle Scream-O-Meter
 description: Dec 2020
 img: assets/img/motorcycle/top_view.jpg
-importance: 3
-category: Electromechanical
+importance: 2
+category: More Projects
 related_publications: false
 ---
 

@@ -3,8 +3,8 @@ layout: page
 title: Puzzles
 description: Jun - Sep 2018
 img: assets/img/puzzles/cube_puzzle.jpg
-importance: 3
-category: Mechanical
+importance: 50
+category: More Projects
 related_publications: false
 ---
 

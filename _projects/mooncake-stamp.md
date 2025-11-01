@@ -3,8 +3,8 @@ layout: page
 title: Mooncake Stamp
 description: Apr 2023
 img: assets/img/mooncake_stamp/mooncake_wax_stamp.jpg
-importance: 2
-category: Mechanical
+importance: 9
+category: More Projects
 related_publications: false
 ---
 

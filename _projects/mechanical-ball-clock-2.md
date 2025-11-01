@@ -3,8 +3,8 @@ layout: page
 title: Mechanical Ball Clock 2 (Ongoing)
 description: Jan 2021 - Apr 2023
 img: assets/img/mechanical_ball_clock_2.jpg
-importance: 1
-category: Mechanical
+importance: 4
+category: More Projects
 related_publications: false
 ---
 
