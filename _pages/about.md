@@ -36,5 +36,5 @@ In my free time, I have been building a fully mechanical computer and a fully me
 
 If you would like to chat, please reach out! I am always eager to meet new people.
 
-Other interests: electronics, rock climbing, sci-fi books, and cooking experiments.
+Other interests: electronics, rock climbing, reading biographies, and cooking.
 
