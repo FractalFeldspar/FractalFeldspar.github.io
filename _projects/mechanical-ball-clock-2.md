@@ -1,39 +1,279 @@
 ---
 layout: page
-title: Mechanical Ball Clock 2 (Ongoing)
-description: Jan 2021 - Apr 2023
-img: assets/img/mechanical_ball_clock_2.jpg
-importance: 4
-category: More Projects
+title: Mechanical Ball Clock 2
+description: Jan 2021 - Aug 2026
+img: assets/img/mechanical_ball_clock_2/mechanical_ball_clock_2.jpg
+importance: 1
+category: Featured
 related_publications: false
 ---
 
+<style>
+    /* Video container that respects Bootstrap width */
+    .video-container {
+        position: relative;
+        width: calc(100% + 30px);
+        margin-left: -15px; 
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        margin-bottom: 20px;
+    }
 
-<div class="embed-responsive embed-responsive-16by9 mb-3">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5c_HX65pFv8?si=cXLboszJ8QVka16d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 mt-0">
+            <div class="video-container" id="video-container">
+                <div id="player"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
-Unlike my first mechanical ball clock, I have designed this clock to have no moving parts except for the steel balls. This clock is not finished, but the timekeeping module (top red), display module (green), and regulator module (bottom red) are close to finished. Some more details about these modules:
-<ul>
-<li>The timekeeping module’s period is set by the time it takes for a ball to roll down the spiral ramp (around 30 seconds). This period can be adjusted by tilting the entire spiral clockwise or counterclockwise. However, like other clocks based around rolling balls, this clock’s period is not very precise due to rolling resistance and its sensitivity to dust.</li>
-<li>The number of balls in the display module represents how much time has passed. Each ball in the top submodule represents 30 seconds and each ball in the bottom submodule represents 5 minutes (ignore the two balls on the far left of each submodule). I don’t show this in the video, but it is possible to toggle the submodule between a 10 ball cycle, 8 ball cycle, 6 ball cycle, and a pass-through mode by altering where the row of balls transition from being near the wall to being away from the wall (when looking from left to right).</li>
-<li>The regulator module’s sole purpose is to take in surges of steel balls from the display module and release them one at a time to whatever module comes after it. This ensures that the next module has a predictable input since surges of steel balls can create jams, overflows, and other unintended effects.</li>
-</ul>
+<script>
+    let player;
+    let isPlayerReady = false;
+    
+    // Load the YouTube API
+    function loadYouTubeAPI() {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+    
+    // This function is called automatically when the API is ready
+    function onYouTubeIframeAPIReady() {
+        console.log('YouTube API Ready');
+        player = new YT.Player('player', {
+            width: '100%',
+            height: '100%',
+            videoId: 'xT78vrhAg_0', // Replace with your video ID
+            playerVars: {
+                'playsinline': 1
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onError': onPlayerError
+            }
+        });
+    }
+    
+    function onPlayerReady(event) {
+        console.log('Player Ready');
+        isPlayerReady = true;
+    }
+    
+    function onPlayerError(event) {
+        console.error('YouTube Player Error:', event.data);
+    }
+    
+    function seekTo(seconds) {
+        if (player && isPlayerReady && typeof player.seekTo === 'function') {
+            try {
+                player.seekTo(seconds, true);
+                console.log('Seeking to:', seconds);
+            } catch (error) {
+                console.error('Error seeking:', error);
+            }
+        } else {
+            console.log('Player not ready yet');
+        }
+    }
+    
+    function scrollToVideo() {
+        const playerElement = document.getElementById('player');
+        playerElement.scrollIntoView({ 
+            behavior: 'smooth', // 'auto' would make it jump to the video rather than scroll to it
+            block: 'center' // Options: 'start', 'center', 'end', 'nearest'
+        });
+    }
+    
+    function seekToAndScroll(seconds) {
+        seekTo(seconds);
+        scrollToVideo();
+    }
 
+    // Initialize when page loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadYouTubeAPI);
+    } else {
+        loadYouTubeAPI();
+    }
+</script>
+
+<h2 class="post-title">Introduction</h2>
+This project originated from my <a href="https://maxrfan.com/projects/mechanical-ball-clock/">first mechanical ball clock</a> and my mechanical computer. Back in 2020, I was working on a mechanical computer that would use the presence or lack of steel balls to store binary data. I designed its ALU, bit shifters, and all other components to be fully mechanical. As I worked on those components, I realized that they could all be implemented with no moving parts other than the steel balls that ran through them. My mechanical computer project is still a work in progress, but in 2021 it inspired me to revisit my first mechanical ball clock and design a new mechanical clock with no moving parts other than steel balls.
+
+The point of this project wasn’t to build the most accurate clock. Clocks built around rolling balls are inherently limited in accuracy due to the ball’s rolling resistance and sensitivity to dust on the track. Instead, I picked up this project because I thought it would sharpen my mechanical design skills and give me an opportunity to create mechanisms that haven’t been discovered yet. As far as I’m aware, no other mechanical ball clock has been created with no moving parts other than the steel balls.
+
+Something I didn’t expect was just how challenging this project would be, both technically and logistically. I will discuss this in detail later, but in short these challenges led to the project spanning hundreds of iterations over the span of half a decade. 
+
+<h2 class="post-title">Containers</h2>
+<p class="subpost-timestamp">Timestamp: <a href="#" onclick="seekToAndScroll(10); return false;">0:10</a></p>
+<div class="row justify-content-center">
+    <div class="col-sm-8 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/container.jpg" alt="container at the top of the clock" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+The white container at the top of the clock supplies the red timekeeping module below it with steel balls. The white container at the bottom of the clock is identical to the top container and collects balls after they have passed through the clock. The clock can be kept running indefinitely by swapping the containers each time the top container is about to run out of balls. Whenever a container is lifted, a ball at the outlet of the container automatically drops to prevent balls from leaking out. One of the interesting quirks of this design is that balls in higher rows of the container exit before balls in lower rows. This is opposite to, say, a container of water, where water molecules near the bottom exit before molecules near the top. I chose this top-first arrangement to minimize jamming, which would have been more likely to occur if a ball from a lower row rolled into the leftmost column of balls while the column was falling.
+
+<h2 class="post-title">Timekeeping</h2>
+<p class="subpost-timestamp">Timestamp: <a href="#" onclick="seekToAndScroll(1); return false;">0:01</a></p>
+<div class="row justify-content-center">
+    <div class="col-sm-5 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/timekeeping.jpg" alt="timekeeping module" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+The large red “box” in the middle of the timekeeping module has a spiral path inside of it, and it takes 30 seconds for a ball to roll down it. After exiting the spiral path, the ball knocks a ball out of the base of the column of balls to the right. This causes the column of balls to fall and release a new ball into the top of the spiral path, continuing the timekeeping cycle. To adjust the period of the timekeeping, the entire spiral path can be loosened from the pegboard, tilted slightly clockwise or counterclockwise, and re-tightened.
+
+<h2 class="post-title">Display</h2>
+<p class="subpost-timestamp">Timestamp: <a href="#" onclick="seekToAndScroll(33); return false;">0:33</a></p>
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/display_labeled.jpg" alt="labeled display" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption mt-0">
+    Each of the 3 balls in the top level represents 30 seconds, and each of the 5 balls in the bottom level represents 5 minutes. In this photo, 26 minutes and 30 seconds has passed by.
+</div>
+The display accumulates balls over time, and each ball represents a certain amount of time. The display module is divided into a top level and a bottom level. The top level receives a ball from the timekeeping every 30 seconds, so each ball in the top level represents 30 seconds. Once the top level receives 10 balls, the top level resets itself and sends a single ball to the bottom level. Since it takes 5 minutes for the top level to accumulate 10 balls and send one ball to the bottom level, each ball in the bottom level represents 5 minutes.
+
+One unexpected feature that came with the display design is that I can change its mode of operation just by moving the balls around:
+<div class="embed-responsive embed-responsive-16by9 mt-3 mb-3">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3A00xgW6rbY?si=duMK1fsAGo14Q87O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+As shown in the video, I can make the display reset after 10 balls, 8 balls, 6 balls, or 4 balls, or I can switch the display to a “pass-through” mode that lets balls roll straight through it. The display maintains its mode of operation no matter how many balls pass through it afterwards.
+
+<h2 class="post-title">Random Number Generator</h2>
+<p class="subpost-timestamp">Timestamp: <a href="#" onclick="seekToAndScroll(5); return false;">0:05</a></p>
+<div class="row justify-content-center">
+    <div class="col-sm-4 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/rng.jpg" alt="random number generator module" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+After a ball exits the spiral track of the timekeeping, it releases an additional ball from the base of the column of balls on the right side of the timekeeping module. This means two balls exit the timekeeping module at the end of each timekeeping cycle, and one of the balls goes to the display module. I wanted to do something interesting with the second ball, so I built an RNG (random number generator) for it. 
+
+The RNG produces one random bit, represented by the presence (binary 1) or lack (binary 0) of a steel ball at the bottom of the RNG. The RNG uses the presence or lack of a steel ball to represent a 1 or 0 because the steel’s high reflectance makes it easy to spot from a distance. In contrast, making something like the ball position represent states would not have been as easy to spot from a distance.
+
+The RNG works by first passing the ball through a Galton board structure. The combination of surface friction, vibration, and other uncontrollable variables makes the ball take a random path down. There are 4 outlets at the base of the Galton board. Outlets 1 and 3 will place a ball at the bottom of the RNG (representing a binary 1) and outlets 2 and 4 will remove any ball at the bottom of the RNG (representing a binary 0). Since I wanted to get a 50-50 probability between the outcomes, I chose to use alternating outlets (outlets 1 and 3) instead of outlets on one side (outlets 1 and 2) in case the Galton board was biased towards sending balls to one side.
+
+<h2 class="post-title">Regulator</h2>
+<p class="subpost-timestamp">Timestamp: <a href="#" onclick="seekToAndScroll(35); return false;">0:35</a></p>
+<div class="row justify-content-center">
+    <div class="col-sm-8 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/regulator.jpg" alt="regulator module" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+The purpose of the regulator module is to take in surges of balls from the display and random number generator and release them one at a time into the container below it. This is necessary because it takes time for a ball to roll into the container, and a surge of balls will cause a local overflow. In a way, the regulator is like the mechanical inverse of the display since the display takes in balls one at a time and then releases them all at once. On the mechanical side, the regulator is somewhat similar to the timekeeping in the sense that a ball reaching the exit of the module triggers the release of another ball, but the main difference is that the regulator is self-starting whereas the timekeeping requires the user to manually start the cycle.
+
+<h2 class="post-title">Side Quests</h2>
 <div class="embed-responsive embed-responsive-16by9 mt-4 mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vygMrySow1U?si=a7FmPddF1EdWRx4H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-This project has spawned a number of mini projects. For example, In June 2021, I developed a mechanism that takes in an input stream of balls and splits them evenly between two output paths. I gave the funnel leading into the most constricted region an exponential shape in order to minimize the chance of jamming without making the funnel too tall. (Near parallel walls are more effective at preventing jamming, and jamming occurs most often when the space between the walls is 2-3 balls wide). After a ball passes through the funnel's constriction, it enters an inverted funnel which gives it space to bounce off the ball below it. As seen in the slow motion part of the video, this bouncing is what allows the balls to alternate which output path they go down. For consistency, I biased the wedge at the bottom slightly to the left so that the first ball would always go to the right.
-<br>
+Even though this project originally spawned from my much larger mechanical computer project, it also spawned a number of mini projects of its own. For example, In June 2021, I developed a mechanism that takes in an input stream of balls and splits them evenly between two output paths. I gave the funnel leading into the most constricted region an exponential shape in order to minimize the chance of jamming without making the funnel too tall. Near parallel walls are less likely to jam, and jamming occurs most often when the space between the walls is 2-3 balls wide. After a ball passes through the funnel’s constriction, it enters an inverted funnel which gives it space to bounce off the ball below it. As seen in the slow motion part of the video, this bouncing is what allows the balls to alternate which output path they go down. For consistency, I biased the wedge at the bottom slightly to the left so that the first ball would always go to the right.
 
-As a word of warning to anyone attempting to design similar mechanisms (i.e., mechanisms where most/all the moving parts are balls), these mechanisms are deceptively difficult to get right. Since each ball has 6 degrees of freedom, there are many more ways for these mechanisms to malfunction compared to more constrained mechanisms like, say, linkages and gearboxes. Couple this with the effects of friction, dust, vibration, and magnetism on the steel balls and it becomes very easy for a mechanism under development to seem promising but then hit a wall that no amount of incremental iteration can overcome. Most mechanisms I have designed that had similar levels of geometric complexity took around 5 iterations to get right, but each of the three clock mechanisms I show in the video took me 80 or more iterations to get right. A mechanism under investigation would get to at most a 95% success rate before factors like friction and vibration made it impossible to improve the success rate even if I made 20 more iterations of that mechanism. (Even subtle things like the amount of skin oil I left on the steel balls while handling them could noticeably affect the success rate.) This would then force me to pivot to a different strategy and investigate a new mechanism.
+Another example is my <a href="https://maxrfan.com/projects/automatic-marble-run/">automatic marble run generator</a>. I drew direct inspiration from my work on this clock to create its core auto-running mechanism. I put a detailed description of that project here on my website.
 
+<h2 class="post-title">Lessons Learned</h2>
+<div class="row justify-content-center">
+    <div class="col-sm-8 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/timekeeping_iterations.jpg" alt="timekeeping iterations" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-12 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/display_iterations.jpg" alt="display iterations" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-12 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/regulator_iterations.jpg" alt="regulator iterations" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption mt-0">
+    By 2023, the timekeeping, display, and regulator collectively had around 200 iterations
+</div>
+To be frank, completing this project was a brutal challenge that involved hundreds of iterations and multiple burnouts over the span of half a decade. At the core of the challenge was the fact that these mechanisms are deceptively difficult to get right. Since each ball has 6 degrees of freedom, there were many more ways for these mechanisms to malfunction compared to more constrained mechanisms like linkages and gearboxes. Couple this with the effects of friction, dust, vibration, and magnetism on the steel balls and it became very easy for a mechanism under development to seem promising but then hit a wall that no amount of incremental iteration could overcome. In previous projects, most mechanisms that had similar levels of geometric complexity took around 5 iterations to get right, but it was common for mechanisms in this clock to take over 80 iterations to get right. A common pattern was for my design to get to a 90% success rate before factors like friction and vibration made it impossible to improve the success rate even with 20 more iterations of that mechanism. 
+
+As an example of this, when I was designing the base of the timekeeping there were iterations that worked flawlessly at first. Then I would test them a few days later, and they wouldn’t work. Turns out that the skin oil I had left on the steel balls was affecting the friction between the balls and the 3D printed tracks. After a few days, the skin oil had lost its lubricating properties and the increased friction prevented the design from working. Incidents like these would then force me to pivot strategies and come up with a totally different mechanism.
+
+From these challenges, a few principles became apparent to me:
+<ul>
+<li>Attention to detail is key. Ball based mechanisms like these are sensitive to vibrations, residual magnetism, dust on the tracks, and even the amount of skin oil left on the balls after handling. Since each ball adds 6 degrees of freedom, there are many more ways for the mechanism to fail compared to more constrained mechanisms like gears, cams, and linkages. Attention to detail is what allows me to recognize and reduce these failure modes in future designs.</li>
+<li>Some design problems are unforgiving and tolerate nothing short of the best solutions. If the solution idea is in the wrong direction, no amount of incremental iteration will save it.</li>
+<li>Even if a mechanism works, it’s worth considering how close it is to not working. In this clock, it wasn’t enough for a mechanism to just barely work. Instead, it needed to be so firmly within the space of viable designs that dust on the track, a different 3D printer filament, or a slightly misangled pegboard wouldn’t cause it to stop working.</li>
+</ul>
+
+Another lesson I picked up from this project was to observe the number of incremental iterations I spent on a design. As a rule of thumb, if I created more than 10 iterations of a design and it still didn’t work, that was a strong signal for me to come up with a totally different design rather than assume incremental changes would eventually succeed.
+
+<h2 class="post-title">Designing the Display Module</h2>
 <div class="embed-responsive embed-responsive-16by9 mt-4 mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/wKQSb0pX8GY?si=vyMG-2OIsNtoSb-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="caption mt-0">
-    The design of the display module of the clock took around 80 iterations in total.
+    Creating a working display module took over 80 iterations
 </div>
 
-I believe mechanisms like these are among the most fascinating (and possibly least explored) of all the mechanisms I have encountered, but developing them is unlike any other mechanism I have attempted before. I will have more notes once this clock is done, but for now I would like to note that these types of mechanisms generally function better when they rely on slow, static actions such as a ball sinking and wedging another ball sideways as opposed to momentum-based actions such as a ball gaining speed by rolling down a track and then using its momentum to knock another ball sideways. Minimizing vibration by avoiding sudden vertical drops, sudden direction changes, or high speeds is also essential.
+To illustrate the journey it took for me to start from nothing and arrive at a working design, I will focus specifically on the display module. Even though developing each module was its own journey, the display module’s challenges and the things I learned from them are a good representation of my journeys with the other modules. 
 
+When I first started this clock project back in 2021, one of the notions I had at the back of my mind was that planar designs where the ball was only allowed to move two dimensionally through a single plane were more “elegant” than non-planar designs. Unfortunately, this significantly limited my design space. Planar designs forced me to use more vertical drops, which produced less consistent results due to the higher speeds involved, vibrations they produced, and tendency for the balls to bounce unpredictably upon landing. Vibrations were problematic because vibrations could propagate to anywhere in the design and cause balls there to move in unpredictable ways. I eventually decided to drop the planar design requirement once I realized how many other promising designs I could come up with without that restriction. After this pivot, I began to write down my design requirements for each module in order to make them easier to question.
+
+<div class="embed-responsive embed-responsive-16by9 mt-4 mb-3">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuBKEJ-clso?si=9DKNu0Nr9Ka_7bh7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+This video shows one of my earliest (planar) display designs. Balls from the timekeeping module would enter through the top right and accumulate in the top row. The number of balls that had accumulated would represent how much time had passed by. Every tenth ball to enter would take a different path from the previous nine balls. Instead of accumulating in the top row, the tenth ball would roll under the top row and knock out the ball at the base of the top row. This would cause the entire top row to surge out, resetting that section of the display. As the top row surged out, the ninth ball would drop downward into a lower section of the display. This lower section would be identical to the upper section, but since it would only receive one ball for every ten balls sent by the timekeeping module, each ball in this lower section would represent ten times more time than a ball in the upper section.
+
+As mentioned before, I found planar designs like this one to be unreliable. In the video, I had to plug up certain paths with screwdrivers since the balls wouldn't consistently roll down the paths I wanted them to roll down. This video shows the tenth ball successfully resetting the top row, but most of the time the tenth ball would fail to knock out the ball at the base of the row or it would roll too far forward and prevent the top row from rolling out.
+
+In the summer of 2021, I had a major period of burnout because I felt like I was endlessly creating new iterations while being met with an endless stream of failure. After taking a break for a few months, I decided on two major technical changes:
+
+First, I would switch from ⅜” to ½” diameter steel balls. Friction between steel balls and between steel balls and 3D printed surfaces was unpredictable. Switching the steel balls to a larger diameter significantly increased their mass, which meant they had more weight and momentum with which to overcome friction. This increased diameter also allowed me to make the dimensions of my 3D printed geometry larger, which kept those dimensions from getting too close to the 3D printer’s minimum resolution.
+
+Second, I would rely more on static force instead of momentum. A lot of my previous designs relied on the momentum of a ball to push another ball out of the way, but this relied on overcoming an unpredictable amount of friction between the balls. In some cases, I could overcome this friction by just increasing the momentum of the ball. But in many cases, I was restricted by the fact that each ball already had 6 degrees of freedom, and giving them more kinetic energy only gave them a greater potential to move in unexpected ways such as jumping into different tracks or rolling entirely out of the module. Letting the balls reach higher speeds also produced more vibration once they struck a wall or another ball. For this reason, I began to rely more on static force instead of momentum. 
+
+To illustrate this, below I have one of my earlier iterations of the display module:
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/display_momentum.png" alt="momentum-based display module" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+The tenth ball to enter the display (shown in white) must push a special reset ball (shown in red) out. One of the challenges with this design was to give the tenth ball just enough momentum to push the reset ball out but not so much momentum that it would also roll out and follow the reset ball down.
+
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/display_static_force.png" alt="static-force-based display module" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+In contrast, in my later design I used the weight of this tenth ball pushing vertically downward onto an intermediate ball (shown in yellow) below it. This design produced more than enough force to push the reset ball out without requiring high speeds anywhere.
+
+The display worked pretty well by this point, but on rare occasions the vibrations caused by balls dropping onto the track would cause a ball entering the display to roll down the wrong path. For this reason, I split the display into two parts:
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/display_halves.png" alt="display module split into two parts" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+One part (shown in red) consisted of the vibration-producing exit and entrance of the display, and the other part (shown in green) consisted of the vibration-sensitive middle of the display. Since the steel pegboard has much higher mass and stiffness than the 3D printed display, this design ensured that very little vibration from the high vibration part of the display would make it into the vibration-sensitive part of the display.
+
+One of my biggest technical lessons during this project was that designing these mechanisms was an exercise in keeping their degrees of freedom under control, and some of the best strategies I found were to keep things low speed and to minimize vibration.
+
+At a higher level, one of the biggest strategic lessons I learned from this project was that it was better to develop modules together instead of one at a time. This is conceptually similar to how auto mechanics are taught to tighten bolt patterns a little bit at a time instead of one at a time. In this project, instead of finishing the timekeeping module before starting work on the display module, I found it more effective to work on the timekeeping for a week, switch over to working on the display for a week, come back to the timekeeping, and so on and so forth. Having these periods of time in between working on the same module allowed me to come back to them with fresh new perspectives, and most importantly it enabled me to quickly get all the modules on my pegboard and see how they fit together. 
+
+<div class="row justify-content-center">
+    <div class="col-sm-3 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/double_container_clock.png" alt="clock with double containers" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/mechanical_ball_clock_2/mechanical_ball_clock_2.jpg" alt="final clock design" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+To illustrate this point, I first designed the clock to have a double container design where there would be two containers at the top and two containers at the bottom (first photo) instead of just one container at the top and bottom (second photo). This was mechanically functional, but it was only after I put all the modules together in one CAD assembly that I realized just how much space those double containers would take on the pegboard. This convinced me to do a complete pivot and design a new single container from scratch. If I had finished the double container design before coming to this realization, I would have burned significant time finishing a design I was never going to use.
+
+<h2 class="post-title">Closing Thoughts</h2>
+Over the years, I have found it much easier to start projects than to finish them. This has been especially true for large projects like this clock since it's difficult to predict all the time-consuming challenges those projects will bring up. For this reason, completing this project felt like a major personal achievement to me. It took far longer than I expected, but I learned many technical lessons through it. Perhaps more importantly, it's shown me that the logistical challenge of finding the time and motivation to push a project to completion can be just as, if not more difficult, than the technical challenges of the project.
+
+As challenging as this project was, I have come to believe that mechanisms like these are among the most fascinating (and possibly least explored) of all the mechanisms I have encountered. Their intolerance of anything but the most well-thought-out designs makes them a great way to sharpen mechanical design skills, and any project involving them is likely to lead to the discovery of previously unknown mechanisms. 

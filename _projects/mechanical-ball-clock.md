@@ -3,8 +3,8 @@ layout: page
 title: Mechanical Ball Clock
 description: Apr - Jul 2019
 img: assets/img/mechanical_ball_clock/full_clock.jpg
-importance: 1
-category: Featured
+importance: 4
+category: More Projects
 related_publications: false
 ---
 
@@ -210,4 +210,4 @@ This is where all the balls collect after they have expended their potential ene
 </div>
 It took me an unusually high number of iterations to design the mechanisms in this project compared to my other projects. In this project, it was typical for me to design over ten iterations of a mechanism before it began to work reliably. This was especially true of the storage and timekeeping modules. <br>
 
-Years later, I decided to continue exploring ball-based mechanisms by beginning work on a mechanical computer run by steel balls and a second mechanical ball clock. I realized that I could perform complex operations such as adding, bit shifting, timekeeping, and displaying using no moving parts other than the steel balls. However, it seems like designing ball-based mechanisms is deceptively challenging. Some of the mechanisms I designed for my mechanical computer and second clock took around 100 iterations to get right, and I still have many more mechanisms to design for those projects. 
+Years later, I decided to continue exploring ball-based mechanisms by beginning work on a mechanical computer run by steel balls and a <a href="https://maxrfan.com/projects/mechanical-ball-clock-2/">second mechanical ball clock</a>. I realized that I could perform complex operations such as adding, bit shifting, timekeeping, and displaying using no moving parts other than the steel balls. However, it seems like designing ball-based mechanisms is deceptively challenging. Some of the mechanisms I designed for my mechanical computer and second clock took around 100 iterations to get right, and many of those mechanisms are still a work in progress.
