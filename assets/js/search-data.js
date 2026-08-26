@@ -515,9 +515,9 @@ ninja.data = [{
           description: "Jul 2018 - Sep 2020",
           section: "Projects",handler: () => {
               window.location.href = "/projects/locks/";
-            },},{id: "projects-mechanical-ball-clock-2-ongoing",
-          title: 'Mechanical Ball Clock 2 (Ongoing)',
-          description: "Jan 2021 - Apr 2023",
+            },},{id: "projects-mechanical-ball-clock-2",
+          title: 'Mechanical Ball Clock 2',
+          description: "Jan 2021 - Aug 2026",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mechanical-ball-clock-2/";
             },},{id: "projects-mechanical-ball-clock",
