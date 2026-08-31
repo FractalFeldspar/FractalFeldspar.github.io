@@ -3,7 +3,7 @@ layout: page
 title: Locks
 description: Jul 2018 - Sep 2020
 img: assets/img/magnetic_lock.jpg
-importance: 8
+importance: 11
 category: More Projects
 related_publications: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: Chinese Learning Practice
 description: Aug 2025
 img: assets/img/chinese_practice.png
-importance: 10
+importance: 8
 category: More Projects
 related_publications: false
 ---

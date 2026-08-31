@@ -3,7 +3,7 @@ layout: page
 title: Reverse Engineering a Bluebike
 description: Feb - Mar 2025
 img: assets/img/Bluebike/bluebike.jpg
-importance: 6
+importance: 4
 category: Featured
 related_publications: false
 ---

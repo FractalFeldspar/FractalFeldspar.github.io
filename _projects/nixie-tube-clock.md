@@ -3,7 +3,7 @@ layout: page
 title: Nixie Tube Clock
 description: Jan 2023
 img: assets/img/nixie/nixie_closeup.jpg
-importance: 3
+importance: 50
 category: More Projects
 related_publications: false
 ---

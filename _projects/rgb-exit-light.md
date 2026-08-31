@@ -3,7 +3,7 @@ layout: page
 title: RGB Exit Light
 description: May - Jun 2024
 img: assets/img/rgb_exit_light/rgb_exit_light_ecad.png
-importance: 5
+importance: 6
 category: Featured
 related_publications: false
 ---

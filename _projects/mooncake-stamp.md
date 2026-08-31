@@ -3,7 +3,7 @@ layout: page
 title: Mooncake Stamp
 description: Apr 2023
 img: assets/img/mooncake_stamp/mooncake_wax_stamp.jpg
-importance: 9
+importance: 10
 category: More Projects
 related_publications: false
 ---

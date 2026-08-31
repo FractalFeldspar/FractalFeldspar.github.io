@@ -3,7 +3,7 @@ layout: page
 title: Streetlamp Morse Code
 description: Jul - Oct 2022
 img: assets/img/Streetlamp/streetlamp_with_keyboard.jpg
-importance: 11
+importance: 7
 category: More Projects
 related_publications: false
 ---

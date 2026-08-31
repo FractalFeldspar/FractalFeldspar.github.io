@@ -1,9 +1,9 @@
 ---
 layout: page
-title: E-Bike Kickstand
+title: CNC Milled Kickstand
 description: Sep 2023
 img: assets/img/kickstand/full_kickstand.jpg
-importance: 90
+importance: 6
 category: More Projects
 related_publications: false
 ---

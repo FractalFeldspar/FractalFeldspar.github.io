@@ -3,7 +3,7 @@ layout: page
 title: Waterphone
 description: May 2023
 img: assets/img/waterphone/waterphone_on_stool.jpg
-importance: 12
+importance: 50
 category: More Projects
 related_publications: false
 ---

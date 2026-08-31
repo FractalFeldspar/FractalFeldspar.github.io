@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Automatic Marble Run
+title: Marble Run CAD Script
 description: Aug - Sep 2025
 img: assets/img/marble_run/marble_run.jpg
-importance: 6
+importance: 3
 category: More Projects
 related_publications: false
 ---
