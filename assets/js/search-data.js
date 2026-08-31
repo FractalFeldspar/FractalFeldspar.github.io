@@ -450,8 +450,8 @@ ninja.data = [{
           description: "Nov 2017",
           section: "Projects",handler: () => {
               window.location.href = "/projects/auditorium/";
-            },},{id: "projects-automatic-marble-run",
-          title: 'Automatic Marble Run',
+            },},{id: "projects-marble-run-cad-script",
+          title: 'Marble Run CAD Script',
           description: "Aug - Sep 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/automatic-marble-run/";
@@ -470,6 +470,11 @@ ninja.data = [{
           description: "Jun 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/capacitor-plushie/";
+            },},{id: "projects-car-knowledge-map",
+          title: 'Car Knowledge Map',
+          description: "Apr 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/car-knowledge-map/";
             },},{id: "projects-chameleon",
           title: 'Chameleon',
           description: "Feb - May 2023",
@@ -495,8 +500,8 @@ ninja.data = [{
           description: "May 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/donuts/";
-            },},{id: "projects-e-bike-kickstand",
-          title: 'E-Bike Kickstand',
+            },},{id: "projects-cnc-milled-kickstand",
+          title: 'CNC Milled Kickstand',
           description: "Sep 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ebike-kickstand/";
