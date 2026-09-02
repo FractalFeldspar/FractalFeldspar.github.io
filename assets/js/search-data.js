@@ -465,6 +465,11 @@ ninja.data = [{
           description: "Feb - Mar 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bluebike/";
+            },},{id: "projects-bose-charger",
+          title: 'Bose Charger',
+          description: "Apr - May 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bose-charger/";
             },},{id: "projects-capacitor-plushie",
           title: 'Capacitor Plushie',
           description: "Jun 2023",
