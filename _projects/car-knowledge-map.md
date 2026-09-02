@@ -8,7 +8,9 @@ category: Featured
 related_publications: false
 ---
 
-In April 2026, I created a [detailed Figma diagram](https://www.figma.com/board/8Z8JU7VuQZICMgmHduujO4/1992-Honda-Accord?node-id=0-1&t=MADBMpcbGqjEycfk-1) explaining how gasoline cars work. I had 3 main goals for making this:
+You can find the car diagram [here](https://www.figma.com/board/8Z8JU7VuQZICMgmHduujO4/1992-Honda-Accord?node-id=0-1&t=MADBMpcbGqjEycfk-1) or copy and paste this URL: <br> https://www.figma.com/board/8Z8JU7VuQZICMgmHduujO4/1992-Honda-Accord?node-id=0-1&t=MADBMpcbGqjEycfk-1 <br> Note that the webpage may take a while to load.
+
+In April 2026, I created a detailed Figma diagram explaining how gasoline cars work. I had 3 main goals for making this:
 <ol>
     <li>Provide background knowledge for anyone who wants to start working on cars</li>
     <li>Satisfy the curiosity of engineers and anyone else who wants to learn how cars work</li>
