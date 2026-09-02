@@ -3,7 +3,7 @@ layout: page
 title: Bose Charger
 description: Apr - May 2026
 img: assets/img/bose_charger/gerber.png
-importance: 6
+importance: 3
 category: Featured
 related_publications: false
 ---
@@ -17,7 +17,7 @@ related_publications: false
     </div>
 </div>
 <div class="caption mt-0">
-    A previous PCB project (first photo) and the Bose charger (second photo)
+    One of my first PCB projects (first photo) and the Bose charger (second photo)
 </div>
 I had made a few PCBs before this project, but I had mostly used those PCBs to connect SMD components together like a more advanced version of a breadboard. I wanted my next PCB to be an exercise in good PCB practices like adding a ground plane, ESD protection, minimizing EMI, and so on. I also wanted to learn how to use a standalone STM32 chip within a PCB.
 
